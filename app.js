@@ -20,7 +20,23 @@ const squares = Array.from(document.querySelectorAll('#board div'));
 
 document.getElementById('board').addEventListener('click', handleTurn);
 
-/****** FUNCTION ******/
+/****** FUNCTIONS ******/
+
+function handleTurn(event) {
+    let idx = squares.findIndex(function(square){
+        return square === event.target;
+    });
+    board[idx] = turn;
+    console.log(board);
+    // ternary statement for X or O
+    // logic: if it is X's turn, assign the turn to O; if it's not X's turn, assign the turn to X
+    // <condition> ? <if condition is true, this> : <else if condition is false, this>
+    turn = turn === 'X' ? '0' : 'X';
+    console.log(turn);
+    render();
+};
+
+
 
 function init() {
     board = [
