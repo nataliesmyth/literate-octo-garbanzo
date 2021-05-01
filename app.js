@@ -4,11 +4,11 @@
 
 /****** APP STATE (variables) ******/
 
-    // in order to make a mark, we need a place for the mark to be made
-    // makiing a mark means the game is initiated
 let board;
 
 let turn = 'X'
+
+let win;
 
 /****** CACHED ELEMENT REFERENCES ******/
 
@@ -29,13 +29,15 @@ function handleTurn(event) {
         return square === event.target;
     });
     board[idx] = turn;
-    console.log(board);
+    // console.log(board);
     // ternary statement for X or O
     // logic: if it is X's turn, assign the turn to O; if it's not X's turn, assign the turn to X
     // <condition> ? <if condition is true, this> : <else if condition is false, this>
     turn = turn === 'X' ? '0' : 'X';
     console.log(turn);
+    console.log(win)
     render();
+    win = board[0] && board[0] === board[1] && board[0] === board[2] ? board[0] : null ;
 };
 
 
