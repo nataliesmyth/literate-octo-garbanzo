@@ -12,9 +12,11 @@ let turn = 'X'
 
 /****** CACHED ELEMENT REFERENCES ******/
 
-    // grab squares
+// grab squares
 const squares = Array.from(document.querySelectorAll('#board div'));
-    // the array.from() function makes an array from all elements returned by querySelectorAll. querySelectorAll finds the elements with the id of .boardand selects all the div children of that element. This way, we didn't have to give each square an id, select them individually and build a new array.
+// the array.from() function makes an array from all elements returned by querySelectorAll. querySelectorAll finds the elements with the id of .boardand selects all the div children of that element. This way, we didn't have to give each square an id, select them individually and build a new array.
+
+const messages = document.querySelector('h2');
 
 /****** EVENT LISTENERS ******/
 
@@ -23,7 +25,7 @@ document.getElementById('board').addEventListener('click', handleTurn);
 /****** FUNCTIONS ******/
 
 function handleTurn(event) {
-    let idx = squares.findIndex(function(square){
+    let idx = squares.findIndex(function(square) {
         return square === event.target;
     });
     board[idx] = turn;
@@ -52,9 +54,10 @@ init();
 // making a mark renders a change in the game
 function render() {
     board.forEach(function(mark, index){
-        console.log(mark, index);
+        // console.log(mark, index);
         // set text content of square of the same position to the mark on the board
         squares[index].textContent = mark;
     });
+    messages.textContent = `It's ${turn}'s turn!`;
 };
 
