@@ -32,7 +32,7 @@ const squares = Array.from(document.querySelectorAll('#board div'));
 
 document.getElementById('board').addEventListener('click', handleTurn);
 const messages = document.querySelector('h2');
-
+document.getElementById('reset-button').addEventListener('click', init);
 
 /****** FUNCTIONS ******/
 
@@ -72,7 +72,14 @@ function render() {
         // set text content of square of the same position to the mark on the board
         squares[index].textContent = mark;
     });
-    messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
+    if ( win === 'T' ) {
+        messages.textContent = `That's a tie, queen!`
+      } else if (win) { 
+        messages.textContent = `${win} wins the game!`
+      } else {
+        messages.textContent = `It's ${turn}'s turn!`
+      }
+    // messages.textContent = win === 'T' ? `That's a tie, queen!` : win ? `${win} wins the game!` : `It's ${turn}'s turn!`;
 };
 
 function getWinner() {
