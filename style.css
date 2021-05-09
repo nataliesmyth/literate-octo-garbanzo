@@ -20,23 +20,50 @@ body {
     height: 100%;
     width: 100%;
     flex-direction: column;
-    }
+}
+
     .flex-wrap {
     /* tells the container to drop down once it reaches max-width */
     flex-wrap: wrap;
     height: 432px;
     width: 432px;
-    }
-    .square {
+}
+
+    .box {
     border: 2px solid rgba(0, 0, 0, .75);
     height: 140px;
     width: 140px;
-    }
-    #reset-button {
+}
+
+#box-0,
+#box-1,
+#box-2 {
+    border-top: none;
+}
+
+#box-0,
+#box-3,
+#box-6 {
+    border-left: none;
+}
+
+#box-6,
+#box-7,
+#box-8 {
+    border-bottom: none;
+}
+
+#box-2,
+#box-5,
+#box-8 {
+    border-right: none;
+}
+
+#reset-button {
     text-align: center;
     font-size: 20px;
     border: 1px solid black;
     height: 55px;
     width: 100px;
     margin: 10px;
-    }
+}
