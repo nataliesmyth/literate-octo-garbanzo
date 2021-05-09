@@ -27,11 +27,11 @@ let win;
 const squares = Array.from(document.querySelectorAll('#board div'));
 // the array.from() function makes an array from all elements returned by querySelectorAll. querySelectorAll finds the elements with the id of .boardand selects all the div children of that element. This way, we didn't have to give each square an id, select them individually and build a new array.
 
+const messages = document.querySelector('h2');
 
 /****** EVENT LISTENERS ******/
 
 document.getElementById('board').addEventListener('click', handleTurn);
-const messages = document.querySelector('h2');
 document.getElementById('reset-button').addEventListener('click', init);
 
 /****** FUNCTIONS ******/
