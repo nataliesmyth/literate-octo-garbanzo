@@ -20,28 +20,25 @@
 </head>
 <body>
     <h1>Tic-Tac-Toe</h1>
-    <h2>It's X's turn!</h2>
     
-<div class="container">
-    <p class='paragraph' id='message'></p>
-    <p class='paragraph' id='game-message'></p>
-        <div class="row flex-wrap" id="board">
-          <div class="col-4 box 0" id='box-0' data-cell-index=0></div>
-          <div class="col-4 box 1" id='box-1' data-cell-index=1></div>
-          <div class="col-4 box 2" id='box-2' data-cell-index=2></div>
-          <div class="col-4 box 3" id='box-3' data-cell-index=3></div>
-          <div class="col-4 box 4" id='box-4' data-cell-index=4></div>
-          <div class="col-4 box 5" id='box-5' data-cell-index=5></div>
-          <div class="col-4 box 6" id='box-6' data-cell-index=6></div>
-          <div class="col-4 box 7" id='box-7' data-cell-index=7></div>
-          <div class="col-4 box 8" id='box-8' data-cell-index=8></div>
+    <div class="flex-container flex-column">
+        <h2>It's X's turn!</h2>
+        <div class="flex-container flex-wrap" id="board">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
         </div>
-    </div>
+
+        <button id="reset-button">reset</button>
     
-    <h2 id="winner"></h2>
-    <button id="reset-button">RESET</button>
-    <!-- A reset button because users are going to want to play round after round of your glorious game without ever refreshing the browser! -->
-    <button id="reset-button">reset</button>
+    <!-- <h2 id="winner"></h2> -->
+    <!-- <button id="reset-button">RESET</button> -->
     </div>
 </body>
 </html>
