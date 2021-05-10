@@ -88,27 +88,27 @@ h2 {
     justify-content: center;
 }
 
-#box-0,
-#box-1,
-#box-2 {
+#square-0,
+#square-1,
+#square-2 {
     border-top: none;
 }
 
-#box-0,
-#box-3,
-#box-6 {
+#square-0,
+#square-3,
+#square-6 {
     border-left: none;
 }
 
-#box-6,
-#box-7,
-#box-8 {
+#square-6,
+#square-7,
+#square-8 {
     border-bottom: none;
 }
 
-#box-2,
-#box-5,
-#box-8 {
+#square-2,
+#square-5,
+#square-8 {
     border-right: none;
 }
 
