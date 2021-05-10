@@ -50,12 +50,32 @@ h2 {
     background: #eee;
   }
 
+.flex-column {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .flex-wrap {
-    /* tells the container to drop down once it reaches max-width */
     flex-wrap: wrap;
     height: 432px;
     width: 432px;
+}
+
+.square {
+    border: 2px solid rgb(8, 8, 8);
+    height: 144px;
+    width: 140px;
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .box {
@@ -100,3 +120,4 @@ h2 {
     width: 100px;
     margin: 10px;
 } */
+
