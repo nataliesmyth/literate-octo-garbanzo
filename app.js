@@ -73,7 +73,7 @@ function render() {
         squares[index].textContent = mark;
     });
     if ( win === 'T' ) {
-        messages.textContent = `That's a tie, queen!`
+        messages.textContent = `That's a tie!`
       } else if (win) { 
         messages.textContent = `${win} wins the game!`
       } else {
